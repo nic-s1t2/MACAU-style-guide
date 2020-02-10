@@ -1,5 +1,6 @@
 ## Table of Contents
 
+> 1. [Project Specific Information](#prj)
 > 1. [Asset Naming Conventions](#anc)
 > 1. [Directory Structure](#structure)
 > 1. [Blueprints](#bp)
@@ -7,6 +8,26 @@
 > 1. [Particle Systems](#ps)
 > 1. [Levels / Maps](#levels)
 > 1. [Textures](#textures)
+
+<a name="prj"></a>
+<a name="0"></a>
+## 0. Project Specific Information
+
+For work on this project we have a number of activations running concurrently, and as such any and all documentation should follow this tyle guide.
+
+When naming documents or files that *do not* already fall under naming conventions within this document, pleae follow this convention:
+
+| Target Project          | Name Prefix                                                |
+| ----------------------- | ---------------------------------------------------------- |
+| Shared/All              | MGPSH                                                      |
+| Driving Strength        | MGPDS                                                      |
+| Wind Tunnel             | MGPWT                                                      |
+| Team Viewer             | MGPTV                                                      |
+| Suit Up                 | MGPSU                                                      |
+
+When naming C++ classes, use only the last two letters of the above, eg `DSGameModeBase` or `WTGameModeBAse`.
+
+When naming modules for use across multiple activations, use the Shared/All prefix, eg `SHNetworkingSubsystem` or `SHIterator`.
 
 <a name="anc"></a>
 <a name="1"></a>
