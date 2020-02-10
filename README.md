@@ -13,7 +13,7 @@
 <a name="0"></a>
 ## 0. Project Specific Information
 
-For work on this project we have a number of activations running concurrently, and as such any and all documentation should follow this tyle guide.
+For work on this project we have a number of activations running concurrently, and as such any and all documentation should follow this style guide.
 
 When naming documents or files that *do not* already fall under naming conventions within this document, pleae follow this convention:
 
