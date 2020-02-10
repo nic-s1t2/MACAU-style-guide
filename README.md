@@ -29,6 +29,8 @@ When naming C++ classes, use only the last two letters of the above, eg `DSGameM
 
 When naming modules for use across multiple activations, use the Shared/All prefix, eg `SHNetworkingSubsystem` or `SHIterator`.
 
+There is a potential risk in the instance where we have two modules with similar classes, which would cause issues, such as `SHGlobals` or `SHData`. In these instances, add additional descriptive names, eg `SHNetworkGlobals` and `SHPackagingData` for safety.
+
 <a name="anc"></a>
 <a name="1"></a>
 ## 1. Asset Naming Conventions ![#](https://img.shields.io/badge/lint-partial_support-yellow.svg)
