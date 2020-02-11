@@ -13,23 +13,99 @@
 <a name="0"></a>
 ## 0. Project Specific Information
 
-For work on this project we have a number of activations running concurrently, and as such any and all documentation should follow this style guide.
+For work on this project we have a number of activations running concurrently, and as such any and all documentation should follow this style guide to avoid confusion around naming conventions, as an incorrectly or poorly named file could be attributed to the wrong project, which would cause serious problems down the line when auditing or editing assets.
 
-When naming documents or files that *do not* already fall under naming conventions within this document, pleae follow this convention:
+### Sections
 
-| Target Project          | Name Prefix                                                |
+< 0.0 [Overview](#anc-nameoverview)
+
+> 0.1 [Google Drive](#anc-gdrive)
+
+> 0.2 [Working Files](#anc-srcfiles)
+
+> 0.3 [Modules](#anc-modules)
+
+> 0.4 [Code](#anc-codenames)
+
+<a name="anc-nameoverview"></a>
+<a name="0.0"></a>
+#### 0.0 Overview
+
+There are a total of four projects that fall under this project, as well as a category for shared assets/files relevant to all. Their identifying acronyms are structured as follows:
+
+`MGPM_[ProjectPrefix]`
+
+| Target Project          | Project Prefix                                             |
 | ----------------------- | ---------------------------------------------------------- |
-| Shared/All              | MGPSH                                                      |
-| Driving Strength        | MGPDS                                                      |
-| Wind Tunnel             | MGPWT                                                      |
-| Team Viewer             | MGPTV                                                      |
-| Suit Up                 | MGPSU                                                      |
+| Shared/All              | SH                                                         |
+| Driving Strength        | DS                                                         |
+| Wind Tunnel             | WT                                                         |
+| Team Viewer             | TV                                                         |
+| Suit Up                 | SU                                                         |
 
-When naming C++ classes, use only the last two letters of the above, eg `DSGameModeBase` or `WTGameModeBAse`.
+Following the above guide, the prefix for a file relating to Driving Strength would be `MGPM_DS`. 
 
-When naming modules for use across multiple activations, use the Shared/All prefix, eg `SHNetworkingSubsystem` or `SHIterator`.
+The following sections give more specific advice for each use case. If by chance you encounter a situation outside of anything in this document, use your common sense, or talk with one of your peers.
 
-There is a potential risk in the instance where we have two modules with similar classes, which would cause issues, such as `SHGlobals` or `SHData`. In these instances, add additional descriptive names, eg `SHNetworkGlobals` and `SHPackagingData` for safety.
+<a name="anc-gdrive"></a>
+<a name="0.1"></a>
+#### 0.1 Google Drive
+
+Documents kept on google drive should follow the full naming convention and acronym. Eg
+
+`MGPM_WT Art Bible`
+`MGPM_DS UX Wireframe`
+
+Keep in mind there may be additional considerations around date and versions, however that is ouside the purvey of this document.
+
+<a name="anc-srcfiles"></a>
+<a name="0.2"></a>
+#### 0.2 Working Files
+
+Working Files relates to source/in progress files such as Maya (MA, MB), Photoshop (PSD), After Effects (AE), Premier (PRPROJ), or any other file for use with an external software package.
+
+These files are to be kept in the [SourceFiles](#2e1) folder, and should follow the full naming convention outlined above. Some examples:
+
+A Maya scene that contains a model of a Maclaren F3 car to be used accross multiple projects would be called **MGPM_SH_F3Maclaren.ma**, probably with a more accurate car model name because I don't know about cars.
+
+A Photoshop file with the fully constructed UI elements for Driving Strength would be called `MGPM_DS_UiElements.psd`.
+
+While this may provide some disconnection between the final imported elements into Unreal, it is necessary as these external files often contain more than one final asset. Final, import-ready assets should have the same [Name](#1) as outlined in this guide, and should be kept in the appropriate [Exports](#2e1) folder.
+
+<a name="anc-modules"></a>
+<a name="0.3"></a>
+#### 0.3 Modules
+
+With these projects, as with all others, we should strive to modularise and seperate distinct functionality within each project. To achieve this we will use modules. To do this effectivly we will need to keep the namespaces as clean and logical as possible.
+
+The core module of a project (that is, the base uproject itself) should simply be named the project name, so:
+
+`DrivingStrength`
+`WindTunnel`
+`SuitUp`
+`TeamViewer`
+
+Sub-modules should be named using their parent Project Prefix, then a descriptive name, so for example:
+
+A Live Data module for Driving Strength would be `DSLiveData`
+An Input System for Wind Tunnel would be `WTInputSystem`
+A PitPass Communications **plugin** that is used in *all* projects would be `SHPitPassComms`
+
+<a name="anc-codenames"></a>
+<a name="0.4"></a>
+#### 0.4 Code
+
+When naming C++ classes there are two sets of rules to keep in mind.
+
+When naming classes in the base module of a project use only the Project Prefix, eg `DSGameModeBase` or `WTGameModeBAse`.
+
+When naming classes inside of a sub-module, they should use the Project prefix *and the first syllable of their descriptive name*. So for the examples above:
+
+`DSLiveSubsystem`
+`WTInManager`
+`SHPitUDPComponent`
+
+While this may be a little confusing at first, it is neccessary to ensure that no classes nor namespaces share names.
 
 <a name="anc"></a>
 <a name="1"></a>
