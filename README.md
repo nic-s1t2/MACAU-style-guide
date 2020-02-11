@@ -17,7 +17,7 @@ For work on this project we have a number of activations running concurrently, a
 
 ### Sections
 
-< 0.0 [Overview](#anc-nameoverview)
+> 0.0 [Overview](#anc-nameoverview)
 
 > 0.1 [Google Drive](#anc-gdrive)
 
@@ -53,8 +53,8 @@ The following sections give more specific advice for each use case. If by chance
 
 Documents kept on google drive should follow the full naming convention and acronym. Eg
 
-`MGPM_WT Art Bible`
-`MGPM_DS UX Wireframe`
+`MGPM_WT Art Bible`  
+`MGPM_DS UX Wireframe`  
 
 Keep in mind there may be additional considerations around date and versions, however that is ouside the purvey of this document.
 
@@ -80,10 +80,10 @@ With these projects, as with all others, we should strive to modularise and sepe
 
 The core module of a project (that is, the base uproject itself) should simply be named the project name, so:
 
-`DrivingStrength`
-`WindTunnel`
-`SuitUp`
-`TeamViewer`
+`DrivingStrength`  
+`WindTunnel`  
+`SuitUp`  
+`TeamViewer`  
 
 Sub-modules should be named using their parent Project Prefix, then a descriptive name, so for example:
 
@@ -101,9 +101,9 @@ When naming classes in the base module of a project use only the Project Prefix,
 
 When naming classes inside of a sub-module, they should use the Project prefix *and the first syllable of their descriptive name*. So for the examples above:
 
-`DSLiveSubsystem`
-`WTInManager`
-`SHPitUDPComponent`
+`DSLiveSubsystem`  
+`WTInManager`  
+`SHPitUDPComponent`  
 
 While this may be a little confusing at first, it is neccessary to ensure that no classes nor namespaces share names.
 
