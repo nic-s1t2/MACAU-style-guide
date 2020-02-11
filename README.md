@@ -66,9 +66,15 @@ Working Files relates to source/in progress files such as Maya (MA, MB), Photosh
 
 These files are to be kept in the [SourceFiles](#2e1) folder, and should follow the full naming convention outlined above. Some examples:
 
-A Maya scene that contains a model of a Maclaren F3 car to be used accross multiple projects would be called **MGPM_SH_F3Maclaren.ma**, probably with a more accurate car model name because I don't know about cars.
+A Maya scene that contains a model of a Maclaren F3 car to be used accross multiple projects would be called `MGPM_SH_F3Maclaren.ma`, probably with a more accurate car model name because I don't know about cars.
 
 A Photoshop file with the fully constructed UI elements for Driving Strength would be called `MGPM_DS_UiElements.psd`.
+
+Some other examples:
+
+`MGPM_SU_SuitAppliedSFX.aup`  
+`MGPM_DS_ExhaustFlipbook.aep`  
+`MGPM_WT_IntroVideo.prproj`  
 
 While this may provide some disconnection between the final imported elements into Unreal, it is necessary as these external files often contain more than one final asset. Final, import-ready assets should have the same [Name](#1) as outlined in this guide, and should be kept in the appropriate [Exports](#2e1) folder.
 
