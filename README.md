@@ -94,7 +94,9 @@ The core module of a project (that is, the base uproject itself) should simply b
 Sub-modules should be named using their parent Project Prefix, then a descriptive name, so for example:
 
 A Live Data module for Driving Strength would be `DSLiveData`
+
 An Input System for Wind Tunnel would be `WTInputSystem`
+
 A PitPass Communications **plugin** that is used in *all* projects would be `SHPitPassComms`
 
 <a name="anc-codenames"></a>
