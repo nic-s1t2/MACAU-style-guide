@@ -105,7 +105,7 @@ A PitPass Communications **plugin** that is used in *all* projects would be `SHP
 
 When naming C++ classes there are two sets of rules to keep in mind.
 
-When naming classes in the base module of a project use only the Project Prefix, eg `DSGameModeBase` or `WTGameModeBAse`.
+When naming classes in a project use only the **MODULE** Prefix, eg `DSGameModeBase` or `WTGameModeBAse`.
 
 When naming classes inside of a sub-module, they should use the Project prefix *and the first syllable of their descriptive name*. So for the examples above:
 
